@@ -7,7 +7,7 @@ const port = 3000
 
 app.use(express.json())
 
-const todoRoutes = require ('./routers/routers-todo')
+const todoRoutes = require ('./routers/todo')
 app.use("/todo", todoRoutes)
 
 mongoose.set("strictQuery", false);
