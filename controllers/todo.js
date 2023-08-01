@@ -4,8 +4,12 @@ const todoControllers = {
 create: async (req,res) => {
   try {
       const todo = req.body.todo
+      const responsible = req.body.responsible
+      const dueData = req.body.dueData
       await Todo.create ({
-        todo : todo
+        todo : todo,
+        responsible : responsible,
+        dueData : dueData
       })
       res.json({msg:'Created'})
 
@@ -17,11 +21,9 @@ create: async (req,res) => {
 
 get: async (req,res) => {
   try {
-      const todo = await Todo.find({})
+      const todos = await Todo.find({})
 
-      res.json(
-        todo
-        )
+      res.json(todos)
     } catch (error) {
       return res.status(500).json({msg:error.message})
     }
@@ -31,9 +33,9 @@ getById: async (req,res) => {
   try {
         const {id} = req.params
         const todo = await Todo.findById(id)
-        res.json(
-          todo
-          )
+
+        res.json(todo)
+
     } catch (error) {
         return res.status(500).json({msg:error.message})
     }
@@ -43,8 +45,12 @@ update: async (req,res) =>{
   try{
       const {id} = req.params
       const todo = req.body.todo
+      const responsible = req.body.responsible
+      const dueData = req.body.dueData
       await Todo.findByIdAndUpdate(id,{
-        todo : todo
+        todo : todo,
+        responsible : responsible,
+        dueData : dueData
       })
       res.json({msg:'Updated'})
   }catch(error){
