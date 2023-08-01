@@ -6,6 +6,17 @@ const TodoSchema = new Schema({
       type: String,
       required: true,
       maxLength: 50
+    },
+    responsible: {
+      type: Schema.Types.String,
+      ref: "Responsible",
+      require: true,
+      maxLength: 50
+    },
+    dueData: {
+      type: Schema.Types.String,
+      require: true,
+      default: true
     }
 })
 
