@@ -9,23 +9,23 @@ const TodoSchema = new Schema({
     },
     description: {
       type: Schema.Types.String,
-      require: false,
+      required: true,
       maxLength: 150
     },
     responsible: {
       type: Schema.Types.String,
       ref: "Responsible",
-      require: true,
+      required: true,
       maxLength: 50
     },
     dueData: {
       type: Schema.Types.String,
-      require: true,
-      default: true
+      required: true,
+      default: new Date()
     },
     done: {
       type : Boolean,
-      require: true,
+      required: true,
       default: false
     }
 })
