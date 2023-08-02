@@ -4,12 +4,15 @@ const todoControllers = {
 create: async (req,res) => {
   try {
       const todo = req.body.todo
+      const description = req.body.description
       const responsible = req.body.responsible
       const dueData = req.body.dueData
       await Todo.create ({
         todo : todo,
+        description : description,
         responsible : responsible,
-        dueData : dueData
+        dueData : dueData,
+
       })
       res.json({msg:'Created'})
 
@@ -45,10 +48,13 @@ update: async (req,res) =>{
   try{
       const {id} = req.params
       const todo = req.body.todo
+      const description = req.body.description
       const responsible = req.body.responsible
       const dueData = req.body.dueData
+
       await Todo.findByIdAndUpdate(id,{
         todo : todo,
+        description : req.body.description,
         responsible : responsible,
         dueData : dueData
       })
