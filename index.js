@@ -1,3 +1,4 @@
+const cors = require('cors')
 const express = require(`express`)
 const mongoose = require(`mongoose`)
 require(`dotenv`).config()
@@ -5,6 +6,13 @@ require(`dotenv`).config()
 const app = express()
 const port = 3000
 
+app.use(cors({
+  origin:"*",
+  methods:"GET,HEAD,POST,PATCH,PUT,DELETE",
+  credentials: true,
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+}))
 app.use(express.json())
 
 const todoRoutes = require ('./routers/todo')
