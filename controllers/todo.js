@@ -57,7 +57,7 @@ update: async (req,res) =>{
 
       await Todo.findByIdAndUpdate(id,{
         todo : todo,
-        description : req.body.description,
+        description : description,
         responsible : responsible,
         dueData : dueData,
         done : done
