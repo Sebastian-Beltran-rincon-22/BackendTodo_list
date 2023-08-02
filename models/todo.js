@@ -19,8 +19,7 @@ const TodoSchema = new Schema({
       maxLength: 50
     },
     dueData: {
-      type: Schema.Types.String,
-      required: true,
+      type: Date,
       default: new Date()
     },
     done: {
