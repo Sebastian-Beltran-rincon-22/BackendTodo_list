@@ -9,7 +9,7 @@ const TodoSchema = new Schema({
     },
     description: {
       type: Schema.Types.String,
-      require: true,
+      require: false,
       maxLength: 150
     },
     responsible: {
@@ -22,6 +22,11 @@ const TodoSchema = new Schema({
       type: Schema.Types.String,
       require: true,
       default: true
+    },
+    done: {
+      type : Boolean,
+      require: true,
+      default: false
     }
 })
 
