@@ -28,7 +28,7 @@ get: async (req,res) => {
   try {
       const todos = await Todo.find({})
 
-      res.json(todos)
+      res.json(todos.reverse())
     } catch (error) {
       return res.status(500).json({msg:error.message})
     }
