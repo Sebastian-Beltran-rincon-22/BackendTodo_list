@@ -7,11 +7,13 @@ create: async (req,res) => {
       const description = req.body.description
       const responsible = req.body.responsible
       const dueData = req.body.dueData
+      const done = req.body.done
       await Todo.create ({
         todo : todo,
         description : description,
         responsible : responsible,
         dueData : dueData,
+        done : done
 
       })
       res.json({msg:'Created'})
@@ -51,12 +53,14 @@ update: async (req,res) =>{
       const description = req.body.description
       const responsible = req.body.responsible
       const dueData = req.body.dueData
+      const done = req.body.done
 
       await Todo.findByIdAndUpdate(id,{
         todo : todo,
         description : req.body.description,
         responsible : responsible,
-        dueData : dueData
+        dueData : dueData,
+        done : done
       })
       res.json({msg:'Updated'})
   }catch(error){
