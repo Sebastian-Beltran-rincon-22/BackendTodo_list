@@ -8,15 +8,16 @@ create: async (req,res) => {
       const responsible = req.body.responsible
       const dueData = req.body.dueData
       const done = req.body.done
-      await Todo.create ({
+
+      const newToDo = new Todo({
         todo : todo,
         description : description,
         responsible : responsible,
         dueData : dueData,
         done : done
-
       })
-      res.json({msg:'Created'})
+      await newToDo.save()
+      res.status(201).json(newToDo)
 
     } catch (error) {
       return res.status(500).json ({msg:error.message})
