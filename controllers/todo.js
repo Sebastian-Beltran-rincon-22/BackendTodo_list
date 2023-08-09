@@ -56,14 +56,14 @@ update: async (req,res) =>{
       const dueData = req.body.dueData
       const done = req.body.done
 
-      await Todo.findByIdAndUpdate(id,{
+      const UpdateTodo = await Todo.findByIdAndUpdate(id,{
         todo : todo,
         description : description,
         responsible : responsible,
         dueData : dueData,
         done : done
       })
-      res.json({msg:'Updated'})
+      res.status(201).json(UpdateTodo)
   }catch(error){
       console.error(error)
       return res.status(500).json({msg:error.message})
