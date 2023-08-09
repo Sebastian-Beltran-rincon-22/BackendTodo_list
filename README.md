@@ -1,9 +1,8 @@
 
 # CRUD ToDo-List - Express
 
-![Logo](https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png)
-![Logo](https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg)
-![Logo](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
+![Logo](https://www.dailyupblog.com/wp-content/uploads/node_express.jpg)
+
 
 
 ## Descripción
@@ -26,12 +25,12 @@ Este proyecto es un ejemplo de una API RESTful desarrollada con Express-Js que p
 
 1 Clona el repositorio en tu maquina local
 ```bash
-$ git clone https://github.com/TheLostHeaven/ToDo-Js.git
+$ git clone git@github.com:Sebastian-Beltran-rincon-22/BackendTodo_list.git
 ```
 
 2 Navega en el directorio del proyecto 
 ```bash
-$ cd ToDo-Js
+$ cd TODO-LIST_API
 ```
 
 3 Puedes cambiar el origen del proyecto con los siguientes comand
@@ -64,10 +63,10 @@ http://localhost:3000
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia o quieres la documentacion para desarrollar este proyecto, no dudes en contactarme en [tiquedaniel2002@gmail.com](tiquedaniel2002@gmail.com).
+Si tienes alguna pregunta o sugerencia o quieres la documentacion para desarrollar este proyecto, no dudes en contactarme en [sebastiantincon834@gmail.com](sebastiantincon834@gmail.com).
 
 
 ## Autors
 
-- [@Daniel Molina](https://github.com/TheLostHeaven)
+- [@sebastian beltran](https://github.com/Sebastian-Beltran-rincon-22)
 # ToDo-List_API
